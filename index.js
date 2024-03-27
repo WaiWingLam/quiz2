@@ -39,7 +39,6 @@ app.post('/', async (req, res) => {
 
   console.log(uri)
 
-
   // connect to the database and log the connection
   // mongodb://localhost:27017/Winter24
 
@@ -56,18 +55,7 @@ app.post('/', async (req, res) => {
       name: "Wai Wing Lam",
       studentID: 300370556
     })
-
-    resolveAfter2Seconds()
-    .then(me.save())
-    
-    function resolveAfter2Seconds() {
-      return new Promise((resolve) => {
-        setTimeout(() => {
-          resolve('resolved');
-        }, 2000);
-      });
-    }
-
+    me.save()
   // send a response to the user
   res.send(`<h1>Document  Added</h1>`);
 });
