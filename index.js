@@ -56,7 +56,18 @@ app.post('/', async (req, res) => {
       name: "Wai Wing Lam",
       studentID: 300370556
     })
-    await me.save()
+
+    resolveAfter2Seconds()
+    .then(me.save())
+    
+    function resolveAfter2Seconds() {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve('resolved');
+        }, 2000);
+      });
+    }
+
   // send a response to the user
   res.send(`<h1>Document  Added</h1>`);
 });
