@@ -52,7 +52,7 @@ app.post('/', async (req, res) => {
     })
 
   // add the data to the database
-    const me = new await Winter24({
+    const me = new Winter24({
       name: "Wai Wing Lam",
       studentID: 300370556
     })
