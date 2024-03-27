@@ -56,7 +56,7 @@ app.post('/', async (req, res) => {
       name: "Wai Wing Lam",
       studentID: 300370556
     })
-    me.save()
+    await me.save()
   // send a response to the user
   res.send(`<h1>Document  Added</h1>`);
 });
