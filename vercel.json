@@ -2,7 +2,7 @@
     "builds": [
         {
             "src": "index.js",
-            "use": "npm i"
+            "use": "node index"
         }
     ],
     "routes" : [
